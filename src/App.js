@@ -10,6 +10,14 @@ const Box = styled.div`
   height: 100px;
 `;
 
+const Btn = styled.button`
+  background-color: tomato;
+`;
+
+const Input = styled.input.attrs({ required: true })`
+  background-color: tomato;
+`;
+
 // Box 상속
 const Circle = styled(Box)`
   border-radius: 50px;
@@ -22,10 +30,10 @@ const Text = styled.span`
 function App() {
   return (
     <Father>
-      <Box bgColor="teal">
-        <Text>Hello</Text>
-      </Box>
-      <Circle bgColor="tomato" />
+      <Btn as="div">button</Btn>
+      <Input />
+      <Input />
+      <Input />
     </Father>
   );
 }
